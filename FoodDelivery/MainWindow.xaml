@@ -1,0 +1,34 @@
+﻿<mah:MetroWindow x:Class="FoodDelivery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                  GlowBrush="{DynamicResource MahApps.Brushes.Accent}"  
+        xmlns:local="clr-namespace:FoodDelivery"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Viewbox Stretch="Fill">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="600"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Menu>
+                <MenuItem Header="Настройки" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <MenuItem Header="Цветовая схема">
+                        <MenuItem Header="Светлая тема" Click="LightThemeButton"/>
+                        <MenuItem Header="Темная тема" Click="DarkThemeButton"/>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        </Grid>
+    </Viewbox>
+</mah:MetroWindow>

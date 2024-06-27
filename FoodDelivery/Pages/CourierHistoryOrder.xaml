@@ -1,0 +1,36 @@
+﻿<Page x:Class="FoodDelivery.Pages.CourierHistoryOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FoodDelivery.Pages"
+      mc:Ignorable="d" 
+      Title="CourierHistoryOrder">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <ListView Name="BasketList" ItemsSource="{Binding}" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding OrderID}" Width="20" />
+                    <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding OrderStatus}" Width="80" />
+                    <GridViewColumn Header="Именование" DisplayMemberBinding="{Binding ProductName}" Width="100" />
+                    <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding Price}" Width="100" />
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding CourierSurname}" Width="100" />
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding CourierName}" Width="100" />
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding CourierPatronymic}" Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource MahApps.Brushes.Badged.Background}" Grid.RowSpan="4"/>
+    </Grid>
+</Page>
